@@ -273,7 +273,7 @@ if (class_exists('WP_Importer') and !class_exists('Slickplan_Import')) {
                             if ($attr{0} === '@') {
                                 continue;
                             }
-                            if (!$value->count()) {
+                            if (!count($value->children())) {
                                 $this->_sitemap[$key][$cell_id][$attr] = (string) $value;
                             }
                         }
